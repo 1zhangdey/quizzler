@@ -25,7 +25,7 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  List<Icon> scorekeeper= [
+  List<Icon> scorekeeper = [
     Icon(
       Icons.check,
       color: Colors.green,
@@ -83,7 +83,14 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                //The user picked true.
+                setState(() {
+                  scorekeeper.add(
+                    Icon(
+                      Icons.check,
+                      color: Colors.green,
+                    ),
+                  );
+                });
               },
             ),
           ),
